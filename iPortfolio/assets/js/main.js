@@ -271,13 +271,14 @@
         formValues[key] = value;
       });
   
-      // Display the loading message
-      const loadingMessage = this.querySelector('.loading');
-      loadingMessage.style.display = 'block';
+      // Disable the submit button
+      const submitButton = this.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
   
       // Simulate form submission (replace with your actual backend code)
       setTimeout(function() {
         // Hide the loading message
+        const loadingMessage = form.querySelector('.loading');
         loadingMessage.style.display = 'none';
   
         // Display the success message
@@ -286,6 +287,9 @@
   
         // Reset the form
         form.reset();
+  
+        // Enable the submit button
+        submitButton.disabled = false;
       }, 2000);
     });
   });
