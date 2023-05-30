@@ -253,4 +253,41 @@
     })
   });
 
+  // contact form 
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the form element
+    const form = document.querySelector('.php-email-form');
+  
+    // Add submit event listener to the form
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+  
+      // Get the form data
+      const formData = new FormData(this);
+  
+      // Create an object to store the form values
+      const formValues = {};
+      formData.forEach((value, key) => {
+        formValues[key] = value;
+      });
+  
+      // Display the loading message
+      const loadingMessage = this.querySelector('.loading');
+      loadingMessage.style.display = 'block';
+  
+      // Simulate form submission (replace with your actual backend code)
+      setTimeout(function() {
+        // Hide the loading message
+        loadingMessage.style.display = 'none';
+  
+        // Display the success message
+        const successMessage = form.querySelector('.sent-message');
+        successMessage.style.display = 'block';
+  
+        // Reset the form
+        form.reset();
+      }, 2000);
+    });
+  });
+
 })()
