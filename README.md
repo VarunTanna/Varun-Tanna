@@ -43,3 +43,7 @@ If you have any questions, feedback, or opportunities, please feel free to reach
 - LinkedIn: [https://www.linkedin.com/in/varun-tanna-0b79b898/]
 
 I look forward to hearing from you!
+
+## Visuals
+
+![Portfolio Website](iPortfolio/assets/img/WebsiteReadMe.png)
